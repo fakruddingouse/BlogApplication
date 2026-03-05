@@ -14,7 +14,6 @@ const { checkForAuthenticationCookie } = require('./middlewares/authentication')
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-// 'mongodb://localhost:27017/blogify'
 mongoose
     .connect(process.env.MONGO_URL)
     .then((e) => console.log("MongoDB Connected"))
