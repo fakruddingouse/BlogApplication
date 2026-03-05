@@ -1,6 +1,6 @@
+require('dotenv').config()
 const JWT = require('jsonwebtoken');
-
-const secret = "3c8a04cc1d335becc7c2c04c0ad9c7c6";
+const secret = process.env.JWT_SECRET_KEY;
 
 function createTokenForUser(user) {
     // include fullName so templates can display the user's name
